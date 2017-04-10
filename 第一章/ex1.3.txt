@@ -1,0 +1,12 @@
+(define (return_max_two x y z)
+		(if (> x y) 
+			(if (> x z)
+				(if (> y z)
+					(+ x y)
+					(+ x z))
+				(+ x z))
+			(if (> x z)
+				(+ x y)
+				(+ y z))))
+
+(return_max_two 2 6 4)
