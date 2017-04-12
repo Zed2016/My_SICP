@@ -1,0 +1,9 @@
+(define (compute-f n)
+	(if (< n 3)
+		n
+		(f-iter 2 1 0 (- n 2))))
+		
+(define (f-iter fn-1 fn-2 fn-3 n)
+	(if (= n 1)
+		(+ fn-1 (* fn-2 2) (* fn-3 3))
+		(f-iter (+ fn-1 (* fn-2 2) (* fn-3 3)) fn-1 fn-2 (- n 1))))

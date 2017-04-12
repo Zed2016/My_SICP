@@ -1,0 +1,6 @@
+(define (compute-f n)
+	(if (< n 3)
+		n
+		(+ (compute-f (- n 1))
+			(* (compute-f (- n 2)) 2)
+			(* (compute-f (- n 3)) 3))))
