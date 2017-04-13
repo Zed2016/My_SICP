@@ -1,0 +1,8 @@
+(define (fast-multi a b)
+	(cond ((= b 0) 0)
+		(else (multi-iter a b 0))))
+
+(define (multi-iter a b c)
+	(cond ((= b 0) (+ a c))
+		((even? b) (multi-iter (double a) (halve b) c))
+		(else (multi-iter a (- b 1) (+ c a)))))
